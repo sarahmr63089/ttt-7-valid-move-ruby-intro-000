@@ -1,11 +1,7 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
-    if  position_taken?(board, index)
+    if  (index.between?(0, 8)) && (!position_taken?(board, index))
         return true
-    elsif index.between?(0, 8) #both of these need to be true but how? && didn't work?
-      return true
-    elsif not position_taken?(board, index) #can't get this to work
-      return false
     elsif board[index] == "X" || "O" #also this isn't it?
       return false
     else index > 8
